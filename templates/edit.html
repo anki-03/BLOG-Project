@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Admin Login</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        fieldset 
+        {
+        background-color:rgba(18, 235, 224, 0.425);
+        border-style:solid;
+      
+        color:#050505e0;
+        font-size:20px;
+        margin-top:100px;
+        margin-bottom:100px;
+        margin-right:100px;
+        margin-left:100px;
+        height:"100";
+        width:"100"
+        }
+     </style>
+</head>
+<body >
+
+<center>
+    <fieldset >
+    <h1>New Blog</h1>
+    <form action="/change" method="post"aling="center" enctype="multipart/form-data">
+    <input type="hidden" name="id" value="{{data[0]}}"><br><br>
+    Blog Title:<input type="text" placeholder="title" name="Blog" value="{{data[1]}}"><br><br>
+    Post By:<input type="text" placeholder="Person Name" name="post" value="{{data[2]}}"><br> <br> 
+    Description:<textarea type="text"  class="form-control" class="form-center" cols="0" rows="4" name="Description">{{data[3]}}</textarea><br> <br> 
+    Date:<input type="text" placeholder="date" name="Date" value="{{data[4]}}"><br> <br> 
+    Image:<input type="text" type="file" placeholder="Image" name="img"><img src="{{url_for('static',filename='images')}}/{{data[5]}}"><br><br>
+            <input type="file" name="img" value="{{data[5]}}"><br><br>
+  
+
+ 
+
+  
+
+
+        <button type="submit">Post</button>
+    </form>
+</fieldset>
+</center>
+
+</body>
+</html>

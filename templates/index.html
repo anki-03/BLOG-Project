@@ -1,0 +1,158 @@
+<html>
+<head>
+ <title>Blog</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!--Navigation Starts-->
+<nav class="navbar navbar-inverse" style="background-color:rgba(204, 226, 205, 0.89)">
+	<div class="navbar-header" >
+	<a><img src="{{url_for('static',filename='images/logo1.jfif')}}" height="180px" width="450px" id="imgg"></a>
+		<button type="button" data-toggle="collapse" data-target="#mynav" class="navbar-toggle" >
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+
+		</button>
+		</div>
+		
+		<div id="mynav" class="collapse navbar-collapse" float:left;>
+		
+			<ul class="nav navbar-nav">
+				<li style="padding:50px"><a href="#"></a></li>
+				<li style="padding:50px"><a href="#"></a></li>
+
+				<li style="padding: 30px"><a href="/">Home</a></li>
+				<li style="padding:30px"><a href="/contact">Contact Me</a></li>
+                <li style="padding:30px"><a href="/admin">Admin</a></li>
+
+			</ul>
+
+           
+            
+        </div>
+        </div>
+		
+        </div>
+</nav>
+<!--Navigation Ends-->
+<center>
+<div class="title-area" >
+	<h1 >Dhanesh Vyavahare</h1>
+	<p>My Blog, My Thoughts ...</p>
+</div>
+</center>
+<hr>
+
+<!--Grid Starts-->
+<div class="container">
+	<center>
+	<h2 style="color:rebeccapurple"><b>BLOGS</h2></b>
+	</center>
+	<hr>
+ <div class="row" >
+	{%  for i in data %}
+	<div class="col-sm-4 col-xs-12">
+	
+	
+		<!-- <h3>title:</h3>{{i[1]}}<br> -->
+		<h3>{{i[1]}}</h3>
+		<!--<img src="D:\Programs\Fortune Cloude Class\Python\AdvancePython\BlogProject\static\images\{{i[5]}}"></img> -->
+		
+		
+		<img src="{{url_for('static',filename='images')}}/{{i[5]}}" height="300" width="300">
+		
+		<h4> <b>Description:</b> </h4>{{i[3]}}
+		<!-- <a href="#mydiv"data-toggle="collapse">View More</a> -->
+	</div>
+{% endfor %}
+	
+	
+ <!-- <div class="row" >
+	<div class="col-sm-4">
+	<!-- <h3>4. Traditional Gilli Danda</h3>
+	<a href="#imgg"><img src="{{url_for('static',filename='images/img4.jpg')}}" height="180px" width="350px" id="imgg"></a>
+
+		<p>Gilli Danda is one of the most thrilling games originated from the India.
+
+			Gilli danda
+			
+			This game requires two sticks. The smaller stick should be oval-shaped wooden piece known as Gilli and the longer stick is known as danda. The player needs to use the danda to hit the Gilli at the raised end, which then flips in the air. When it is in the air, the player needs to hit the Gilli, as far as possible. Then, the player runs to touch a point outside the circle before the Gilli is taken by another player. The secret of winning this game lies in how well is the gilli raised and hit. It can be played by any number of players.</p>
+	
+	
+	</div> -->
+	<!-- <div class="col-sm-4"> -->
+	<!-- <h3>5.Kho Kho</h3>
+	<a href="#imgg"><img src="{{url_for('static',filename='images/img5.jpg')}}" height="180px" width="350px" id="imgg"></a>
+
+	<p>Kho Kho is yet another popular game invented in India.  It is played by teams of selected 12 players out of 15. From this 12 players, 9 enter the field and sit on their knees and the remaining 3 players try to avoid being touched by members of the opposing team. It is the next popular tag game after kabaddi. Kho-Kho is a traditional Indian sport, which is one of the oldest forms of outdoor sport, dating back to prehistoric India. It is most often played by school children in India and is a competitive game.</p>
+	</div> -->
+	<!-- <div class="col-sm-4" > -->
+	<!-- <h3>6.Kabaddi</h3>
+	<a href="#imgg"><img src="{{url_for('static',filename='images/img6.jpg')}}" height="180px" width="350px" id="imgg"></a>
+
+	<p>Kabaddi is a team sport of India. There are 2 teams with 7 seven players in each team. The aim of the game is that a single player from a team has to run into the opposing team's half of a court, touch as many defenders as possible, and return to their own court. All of this must be done without being tackled by the defenders and most important in a single breath. Players are taken out of the game if they are tackled but can be brought back into the game for each point scored by their team from tackle.</p>
+</div>
+</div>
+<br> -->
+</div> 
+<!--Grid End-->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <h3>1.Chaupar game</h3>
+	<a href="#imgg"><img src="{{url_for('static',filename='images/img1.jpg')}}" height="180px" width="350px" id="imgg"></a>
+
+	<p>Chaupar is an Indian game from 14th century.It consists of a cross shaped board which is either made from cloth or wool. It also consists of wooden pawns and cowry shells. It has for players each having four pawns. Six cowry shells are used to play the game which determine their moves.
+
+		The centre of the cross or board is known as ghar.The centre column on each arm of the cross is the "home column" for each player's men. The starting point for each player is the flower drawn on left of his home column.
+		
+		chaupar
+		
+		Each player can allow his four men to enter into the game only from the starting point. The men have to travel around the outer perimeter columns in an anti-clockwise direction. Before a player brings his men home, he has to knock out another player’s man. Only the player's who have men can enter their home column. Once the men cross the flower, it indicates that they are safe from further attacks.</p>
+	
+	
+	</div> -->
+	<div class="col-sm-4">
+		<!-- <h3>2.Kancha, India games</h3>
+		<a href="#imgg"><img src="{{url_for('static',filename='images/img2.jpg')}}" height="180px" width="350px" id="imgg"></a>
+	
+		<p>Kancha is yet another interesting and inexpensive game from India. It is a favourite game among youngsters, it is played using dark green glass marbles known as ‘Kancha’. The game involves a player hitting the selected target marble using one of his marble. Traditionally, the winner of the game takes away all marbles from the losing players.
+	
+			Kancha
+			
+			The marble is held between the right hand and the forefinger of the left hand. The finger is pulled backward and is released with pressure almost in a spring action. There are various versions of the game from easy to complicated ones.</p>
+		
+		
+		</div> -->
+		<div class="col-sm-4">
+		<!-- <h3>3.Lattoo</h3>
+		<a href="#imgg"><img src="{{url_for('static',filename='images/img3.jpg')}}" height="180px" width="350px" id="imgg"></a>
+	
+		<p>Lattoo is a popular game played in India using a Spinning top. This simple game came to existence in 3500 BC. In the beginning, tops were made of clay. Later, children began to use tops made of wood. Today, a variety of designed and coloured tops are available. There is a string which helps to spin the top and then helps to lift up the spinning top. Usually, two or more players can play this game. The players need to first wrap their tops with the string and then unwind it by pulling the string, making the top to rotate on the ground. The players need to pick their tops with the string as fast as they can. The player whose top spins the longest is declared as the winner.</p>
+	</div>
+	</div>
+	<br>
+	</div>
+	<hr> -->
+	<div class="container">
